@@ -129,6 +129,12 @@ const AuthPage = () => {
           description: result.error,
           variant: "destructive"
         });
+      } else {
+        // Success - user will be redirected by ProtectedRoute logic
+        toast({
+          title: "Success",
+          description: isLogin ? "Welcome back, Hunter!" : "Welcome to FitQuest RPG!",
+        });
       }
     } catch (error) {
       toast({
